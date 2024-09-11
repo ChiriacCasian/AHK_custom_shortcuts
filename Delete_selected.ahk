@@ -1,6 +1,6 @@
-﻿; deletes all the selected files with ctrl + d
+; script that extracts all the selected zip files in the current folder
 
-^d::  ; Ctrl + d
+^e::  ; Ctrl + e
 
 {
     ; Ensure File Explorer is active
@@ -26,9 +26,9 @@
 
         ; Loop through the selected files
         for filePath in selectedFiles
-        {	
-		;msgBox muie
-		FileDelete, filePath
+        {
+
+		FileDelete, %filePath%
         }
     }
 }
